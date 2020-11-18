@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class playerMove : MonoBehaviour
 {
+    public static playerMove player;
     public float moveSpeed;
+    public float rightLeftMoveSpeed;
+    public float rotMoveSpeed;
+    public float powerBarYPos;
     public JoyStick jS;
-    private Animator anime;
+    private Animator anime,anime1;
     private Vector3 moveVector;
     [Header("Enegry Effects")]
     [SerializeField] private GameObject energyExplode;
@@ -25,7 +29,9 @@ public class playerMove : MonoBehaviour
 
     void Start()
     {
-        anime = transform.GetChild(0).GetComponent<Animator>();
+        player = this;
+        //anime = transform.GetChild(1).GetComponent<Animator>();
+        anime1 = transform.GetComponent<Animator>();
         start = end = spwanEnegry =false;
         //size = minSize;
     }
@@ -33,11 +39,12 @@ public class playerMove : MonoBehaviour
 
     void Update()
     {
-        moveVector.x = jS.Horizontal();
+        
+        //moveVector.x = jS.Horizontal();
         moveVector.z = jS.Vertical();
         move();
         isMoving();
-        rotation();
+       // rotation();
         powerBar();
         spwanEnery();
         //enegryRuntime();
@@ -45,18 +52,34 @@ public class playerMove : MonoBehaviour
     }
     private void move()
     {
-        transform.Translate(moveVector * moveSpeed * Time.deltaTime,Space.World);
+        anime1.SetFloat("Blend", moveVector.z);
+        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        transform.Translate(moveVector * rightLeftMoveSpeed * Time.deltaTime,Space.World);
+        /*if(moveVector.z < 0)
+        {
+            transform.GetChild(0).transform.Rotate(Vector3.forward * rotMoveSpeed * Time.deltaTime);
+            //transform.Rotate(Vector3.forward * rotMoveSpeed * Time.deltaTime);
+        }
+        if (moveVector.z > 0)
+        {
+            transform.GetChild(0).transform.Rotate(Vector3.back * rotMoveSpeed * Time.deltaTime);
+            //transform.Rotate(Vector3.back * rotMoveSpeed * Time.deltaTime);
+        }
+        if(moveVector.z == 0)
+        {
+            transform.GetChild(0).transform.Rotate(Vector3.zero * rotMoveSpeed * Time.deltaTime);
+        }*/
     }
     private void isMoving()
     {
-        if(jS.Horizontal() == 0f || jS.Vertical() == 0f)
+/*        if(jS.Horizontal() == 0f || jS.Vertical() == 0f)
         {
             anime.SetBool("run", false);
         }
         else
         {
             anime.SetBool("run", true);
-        }
+        }*/
     }
     private void rotation()
     {
@@ -90,7 +113,6 @@ public class playerMove : MonoBehaviour
         if (start && !spwanEnegry && energy == null)
         {
             energy = Instantiate(energyExplode, transform.position + new Vector3(0,0.05f,0), Quaternion.Euler(90, 0, 0));
-            energy.transform.parent = transform;
             spwanEnegry = true;
         }
         if (end && spwanEnegry)

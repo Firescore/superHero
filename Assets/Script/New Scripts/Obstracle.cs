@@ -8,7 +8,7 @@ public class Obstracle : MonoBehaviour
     public static Obstracle obstracle;
     public NavMeshAgent agent;
     public Animator anime;
-    public GameObject Head, Body, Player, slash;
+    public GameObject Body, Player, slash;
     public float speed = 0.5f;
     public float redius = 5;
     public float health = 10;
@@ -17,8 +17,9 @@ public class Obstracle : MonoBehaviour
     public bool useNavigation = true;
     //public float speed = 0.5f;
     //public float timeLim = 0.5f;
-    
+    [SerializeField]
     private float distanceFromPlayer = 0;
+
     private bool on = true, off = false, lerp=false, added = false, isShieldCollided = false;
 
 
@@ -32,12 +33,10 @@ public class Obstracle : MonoBehaviour
         followObject();
         if (health <= 0)
         {
-            Destroy(Instantiate(slash, transform.position, Quaternion.identity), 01f);
+            //Destroy(Instantiate(slash, transform.position, Quaternion.identity), 01f);
             Destroy(gameObject);
         }
-
-
-        Head.GetComponent<Renderer>().material.SetFloat("_Blend", a);
+        
         Body.GetComponent<Renderer>().material.SetFloat("_Blend", a);
 
         if(health <= 0 && !added)
@@ -47,6 +46,12 @@ public class Obstracle : MonoBehaviour
             added = true;
         }
     }
+
+
+
+
+
+    public float x, y;
 
     void followObject()
     {
@@ -62,10 +67,21 @@ public class Obstracle : MonoBehaviour
         {
             agent.enabled = false;
             distanceFromPlayer = Vector3.Distance(transform.position, Player.transform.position);
-            transform.LookAt(Player.transform.position);
-            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
-            if (!isShieldCollided)
+
+
+            if(distanceFromPlayer <= x && distanceFromPlayer > y)
+            {
+                gameObject.GetComponent<rightleftScript>().enabled = false;
+                transform.LookAt(Player.transform.position);
+                transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
                 anime.SetBool("walk", true);
+            }
+            if(distanceFromPlayer <= y)
+            {
+                anime.SetBool("walk", false);
+            }
+
+
         }
     }
     IEnumerator moveToward(float t)

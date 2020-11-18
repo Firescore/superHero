@@ -37,7 +37,7 @@ public class LaserLeft : MonoBehaviour
     void RAYCASTING()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit,10))
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
             if (hit.collider)
             {
@@ -56,7 +56,7 @@ public class LaserLeft : MonoBehaviour
             }
             else
             {
-                lr1.gameObject.SetActive(false);
+                //lr1.gameObject.SetActive(false);
             }
 
         }

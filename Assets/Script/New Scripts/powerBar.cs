@@ -27,6 +27,7 @@ public class powerBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position = new Vector3(playerMove.player.transform.position.x, playerMove.player.powerBarYPos, playerMove.player.transform.position.z);
         ring();
         colliderChheck();
     }
@@ -35,7 +36,7 @@ public class powerBar : MonoBehaviour
         if (!start)
         {
             countOfEnemy = GameManager.Manager.CurrentEnemy;
-            currentSize = (countOfEnemy / 10);
+            currentSize = (countOfEnemy / 2);
 
             if (currentSize >= maxSize)
             {

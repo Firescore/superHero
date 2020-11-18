@@ -24,8 +24,6 @@ namespace Playtime_Painter.Examples {
             #endif
         }
 
-
-
         private float _rotationY;
 
         public virtual void Update()
