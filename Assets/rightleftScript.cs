@@ -16,35 +16,34 @@ public class rightleftScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        check();
         move();
+        check();
     }
     void check()
     {
-        if (transform.position == start)
+        if (transform.position.z <= start.z)
         {
-            pStart = false;
-            pEnd = true;
+            pStart = true;
+            //pEnd = true;
         }
         else if(transform.position == end)
         {
-            pStart = true;
-            pEnd = false;
+            pStart = false;
+            //pEnd = false;
         }
     }
     void move()
     {
-        if(pStart && !pEnd)
+        if(pStart)
         {
             gameObject.GetComponent<Animator>().SetBool("walk", true);
-            //transform.position = Vector3.MoveTowards(transform.position, end, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, end, speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if (!pStart && pEnd)
+        if (!pStart)
         {
             gameObject.GetComponent<Animator>().SetBool("walk", true);
-            //transform.position = Vector3.MoveTowards(transform.position, start, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, start, speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }

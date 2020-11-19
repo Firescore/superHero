@@ -8,7 +8,7 @@ public class Obstracle : MonoBehaviour
     public static Obstracle obstracle;
     public NavMeshAgent agent;
     public Animator anime;
-    public GameObject Body, Player, slash;
+    public GameObject Body, Player, slash, particleEffect;
     public float speed = 0.5f;
     public float redius = 5;
     public float health = 10;
@@ -33,7 +33,8 @@ public class Obstracle : MonoBehaviour
         followObject();
         if (health <= 0)
         {
-            //Destroy(Instantiate(slash, transform.position, Quaternion.identity), 01f);
+            Destroy(Instantiate(slash, transform.position, Quaternion.Euler(0,90,0)), 5f);
+            Destroy(Instantiate(particleEffect, transform.position + new Vector3(0,1,0), Quaternion.identity), 1f);
             Destroy(gameObject);
         }
         

@@ -998,6 +998,7 @@ MonoBehaviour:
   Body: {fileID: 5200782438986037774}
   Player: {fileID: 0}
   slash: {fileID: 0}
+  particleEffect: {fileID: 0}
   speed: 2
   redius: 5
   health: 10

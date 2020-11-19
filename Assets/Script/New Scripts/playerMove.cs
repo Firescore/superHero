@@ -55,6 +55,7 @@ public class playerMove : MonoBehaviour
         anime1.SetFloat("Blend", moveVector.z);
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         transform.Translate(moveVector * rightLeftMoveSpeed * Time.deltaTime,Space.World);
+
         /*if(moveVector.z < 0)
         {
             transform.GetChild(0).transform.Rotate(Vector3.forward * rotMoveSpeed * Time.deltaTime);
