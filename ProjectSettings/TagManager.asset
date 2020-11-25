@@ -8,6 +8,8 @@ TagManager:
   - enemy
   - girl
   - shield
+  - wall
+  - Thrower
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Player
   - Enemy
   - Post Process
-  - 
+  - grabable
   - 
   - 
   - 

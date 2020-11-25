@@ -73,11 +73,34 @@ public class LaserLeft : MonoBehaviour
         {
             if (GameManager.Manager.Ditection.CompareTag("enemy"))
             {
-                GameManager.Manager.Ditection.GetComponent<Obstracle>().health -= GameManager.Manager.obstracleHealthDeduction;
-
-                if (GameManager.Manager.Ditection.GetComponent<Obstracle>().a <= 1)
+                if (GameManager.Manager.Ditection.GetComponent<Obstracle>())
                 {
-                    GameManager.Manager.Ditection.GetComponent<Obstracle>().a += GameManager.Manager.lerpSpeed;
+                    GameManager.Manager.Ditection.GetComponent<Obstracle>().health -= GameManager.Manager.obstracleHealthDeduction;
+
+                    if (GameManager.Manager.Ditection.GetComponent<Obstracle>().a <= 1)
+                    {
+                        GameManager.Manager.Ditection.GetComponent<Obstracle>().a += GameManager.Manager.lerpSpeed;
+                    }
+                }
+
+                if (GameManager.Manager.Ditection.GetComponent<EnemyThrower>())
+                {
+                    GameManager.Manager.Ditection.GetComponent<EnemyThrower>().health -= GameManager.Manager.obstracleHealthDeduction;
+
+                    if (GameManager.Manager.Ditection.GetComponent<EnemyThrower>().a <= 1)
+                    {
+                        GameManager.Manager.Ditection.GetComponent<EnemyThrower>().a += GameManager.Manager.lerpSpeed;
+                    }
+                }
+
+                if (GameManager.Manager.Ditection.GetComponent<Thrower>())
+                {
+                    GameManager.Manager.Ditection.GetComponent<Thrower>().health -= GameManager.Manager.obstracleHealthDeduction;
+
+                    if (GameManager.Manager.Ditection.GetComponent<Thrower>().a <= 1)
+                    {
+                        GameManager.Manager.Ditection.GetComponent<Thrower>().a += GameManager.Manager.lerpSpeed;
+                    }
                 }
             }
         }

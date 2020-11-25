@@ -18,6 +18,7 @@ public class JoyStick : MonoBehaviour, IDragHandler,IPointerUpHandler, IPointerD
     public virtual void OnPointerDown(PointerEventData ped)
     {
         OnDrag(ped);
+        
     }
     public virtual void OnPointerUp(PointerEventData ped)
     {

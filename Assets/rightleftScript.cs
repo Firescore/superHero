@@ -5,7 +5,7 @@ using UnityEngine;
 public class rightleftScript : MonoBehaviour
 {
     public Vector3 start, end;
-    public bool pStart,pEnd;
+    public bool pStart;
     public float speed;
     // Start is called before the first frame update
     void Start()

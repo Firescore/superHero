@@ -12,9 +12,9 @@ public class playerMove : MonoBehaviour
     public JoyStick jS;
     private Animator anime,anime1;
     private Vector3 moveVector;
-    [Header("Enegry Effects")]
-    [SerializeField] private GameObject energyExplode;
-    [SerializeField] private GameObject energy;
+    //[Header("Enegry Effects")]
+    //[SerializeField] private GameObject energyExplode;
+    //[SerializeField] private GameObject energy;
 
 /*    [Header("Enegry Effects Controller")]
     [SerializeField] private float increamentSpeed = 0;
@@ -40,20 +40,23 @@ public class playerMove : MonoBehaviour
     void Update()
     {
         
-        //moveVector.x = jS.Horizontal();
+        moveVector.x = jS.Horizontal();
         moveVector.z = jS.Vertical();
         move();
         isMoving();
        // rotation();
         powerBar();
-        spwanEnery();
+        //spwanEnery();
         //enegryRuntime();
         cooldownTime();
     }
     private void move()
     {
         anime1.SetFloat("Blend", moveVector.z);
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        /*if(Input.GetMouseButton(0))
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);*/
+
+
         transform.Translate(moveVector * rightLeftMoveSpeed * Time.deltaTime,Space.World);
 
         /*if(moveVector.z < 0)
@@ -109,7 +112,7 @@ public class playerMove : MonoBehaviour
             size = maxSize;
         }*/
     }
-    public void spwanEnery()
+    /*public void spwanEnery()
     {
         if (start && !spwanEnegry && energy == null)
         {
@@ -121,7 +124,7 @@ public class playerMove : MonoBehaviour
             Destroy(energy,spwanRate);
             spwanEnegry = false;
         }
-    }
+    }*/
     /*public void enegryRuntime()
     {
         if (energy !=null)
@@ -136,4 +139,6 @@ public class playerMove : MonoBehaviour
     {
         coolDownT -= Time.deltaTime;
     }
+
+
 }

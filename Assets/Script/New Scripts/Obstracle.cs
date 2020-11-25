@@ -6,17 +6,34 @@ using UnityEngine.AI;
 public class Obstracle : MonoBehaviour
 {
     public static Obstracle obstracle;
+
+
     public NavMeshAgent agent;
     public Animator anime;
     public GameObject Body, Player, slash, particleEffect;
+    public GameObject fireBall;
+
+    public Transform shootPoint;
+
+    [Header("Enemy universal values")]
     public float speed = 0.5f;
     public float redius = 5;
     public float health = 10;
+
+    [Header("Shooting Details")]
+    public float killTime = 3;
+    public float coolDown = 1;
+    public float fireRate = 2;
+    public float fireDelay = 0.5f;
+
+    [Header("Color Changer")]
     public float a = 0;
 
+    [Header("Navigation for using things")]
     public bool useNavigation = true;
-    //public float speed = 0.5f;
-    //public float timeLim = 0.5f;
+    public bool runTowardsPlayer = false;
+    public bool useFireBall = false;
+
     [SerializeField]
     private float distanceFromPlayer = 0;
 
@@ -29,27 +46,18 @@ public class Obstracle : MonoBehaviour
     }
     private void Update()
     {
+        distanceFromPlayer = Vector3.Distance(transform.position, Player.transform.position);
+        obstracleManager();
 
-        followObject();
-        if (health <= 0)
+        if (!useFireBall)
         {
-            Destroy(Instantiate(slash, transform.position, Quaternion.Euler(0,90,0)), 5f);
-            Destroy(Instantiate(particleEffect, transform.position + new Vector3(0,1,0), Quaternion.identity), 1f);
-            Destroy(gameObject);
+            followObject();
         }
-        
-        Body.GetComponent<Renderer>().material.SetFloat("_Blend", a);
-
-        if(health <= 0 && !added)
+        if (useFireBall)
         {
-            GameManager.Manager.Enemies = GameManager.Manager.Enemies + 1;
-            GameManager.Manager.CurrentEnemy = GameManager.Manager.CurrentEnemy + 1;
-            added = true;
+            throwBall();
         }
     }
-
-
-
 
 
     public float x, y;
@@ -58,7 +66,6 @@ public class Obstracle : MonoBehaviour
     {
         if (useNavigation)
         {
-            distanceFromPlayer = Vector3.Distance(transform.position, Player.transform.position);
             if (!isShieldCollided)
                 anime.SetBool("walk", true);
             transform.LookAt(Player.transform.position);
@@ -67,45 +74,16 @@ public class Obstracle : MonoBehaviour
         if (!useNavigation)
         {
             agent.enabled = false;
-            distanceFromPlayer = Vector3.Distance(transform.position, Player.transform.position);
-
-
-            if(distanceFromPlayer <= x && distanceFromPlayer > y)
+            if((distanceFromPlayer <= x && distanceFromPlayer > y) || runTowardsPlayer)
             {
                 gameObject.GetComponent<rightleftScript>().enabled = false;
                 transform.LookAt(Player.transform.position);
                 transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
                 anime.SetBool("walk", true);
             }
-            if(distanceFromPlayer <= y)
-            {
-                anime.SetBool("walk", false);
-            }
 
 
         }
-    }
-    IEnumerator moveToward(float t)
-    {
-        
-        if (on)
-        {
-            yield return new WaitForSeconds(t);
-            off = true;
-            on = false;
-        }
-        if (off)
-        {
-            yield return new WaitForSeconds(t);
-            off = false;
-            on = true;
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireSphere(transform.position, redius);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -116,5 +94,46 @@ public class Obstracle : MonoBehaviour
             speed = 0;
             anime.SetBool("walk", false);
         }
+    }
+
+    void obstracleManager()
+    {
+        runTowardsPlayer = Player.GetComponent<ColliderCheck>().runTowardP;
+        if (health <= 0)
+        {
+            Destroy(Instantiate(slash, transform.position, Quaternion.Euler(0, 90, 0)), 5f);
+            Destroy(Instantiate(particleEffect, transform.position + new Vector3(0, 1, 0), Quaternion.identity), 1f);
+            Destroy(gameObject);
+        }
+
+        Body.GetComponent<Renderer>().material.SetFloat("_Blend", a);
+
+        if (health <= 0 && !added)
+        {
+            GameManager.Manager.Enemies = GameManager.Manager.Enemies + 1;
+            GameManager.Manager.CurrentEnemy = GameManager.Manager.CurrentEnemy + 1;
+            added = true;
+        }
+    }
+
+    void throwBall()
+    {
+        if ((distanceFromPlayer <= x && distanceFromPlayer > y))
+        {
+            transform.LookAt(Player.transform.position);
+            coolDown -= Time.deltaTime;
+            if (coolDown <= 0)
+            {
+                StartCoroutine(shoot(fireDelay));
+                coolDown = 2 / fireRate;
+            }
+        }
+            
+    }
+    IEnumerator shoot(float t)
+    {
+        anime.SetTrigger("shoot");
+        yield return new WaitForSeconds(t);
+        Destroy(Instantiate(fireBall, shootPoint.position, shootPoint.rotation), killTime);
     }
 }

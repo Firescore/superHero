@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: base
+  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Male_Character
+    m_Weight: 1
+  - m_Path: Male_Hips
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_LeftUpLeg
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_LeftUpLeg/Male_LeftLeg
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_LeftUpLeg/Male_LeftLeg/Male_LeftFoot
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_LeftUpLeg/Male_LeftLeg/Male_LeftFoot/Male_LeftToeBase
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_LeftUpLeg/Male_LeftLeg/Male_LeftFoot/Male_LeftToeBase/Male_LeftToe_End
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_RightUpLeg
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_RightUpLeg/Male_RightLeg
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_RightUpLeg/Male_RightLeg/Male_RightFoot
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_RightUpLeg/Male_RightLeg/Male_RightFoot/Male_RightToeBase
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_RightUpLeg/Male_RightLeg/Male_RightFoot/Male_RightToeBase/Male_RightToe_End
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandIndex1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandIndex1/Male_LeftHandIndex2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandIndex1/Male_LeftHandIndex2/Male_LeftHandIndex3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandIndex1/Male_LeftHandIndex2/Male_LeftHandIndex3/Male_LeftHandIndex4
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandMiddle1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandMiddle1/Male_LeftHandMiddle2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandMiddle1/Male_LeftHandMiddle2/Male_LeftHandMiddle3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandMiddle1/Male_LeftHandMiddle2/Male_LeftHandMiddle3/Male_LeftHandMiddle4
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandPinky1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandPinky1/Male_LeftHandPinky2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandPinky1/Male_LeftHandPinky2/Male_LeftHandPinky3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandPinky1/Male_LeftHandPinky2/Male_LeftHandPinky3/Male_LeftHandPinky4
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandRing1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandRing1/Male_LeftHandRing2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandRing1/Male_LeftHandRing2/Male_LeftHandRing3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandRing1/Male_LeftHandRing2/Male_LeftHandRing3/Male_LeftHandRing4
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandThumb1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandThumb1/Male_LeftHandThumb2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandThumb1/Male_LeftHandThumb2/Male_LeftHandThumb3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_LeftShoulder/Male_LeftArm/Male_LeftForeArm/Male_LeftHand/Male_LeftHandThumb1/Male_LeftHandThumb2/Male_LeftHandThumb3/Male_LeftHandThumb4
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_Neck
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_Neck/Male_Head
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_Neck/Male_Head/Male_HeadTop_End
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandIndex1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandIndex1/Male_RightHandIndex2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandIndex1/Male_RightHandIndex2/Male_RightHandIndex3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandIndex1/Male_RightHandIndex2/Male_RightHandIndex3/Male_RightHandIndex4
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandMiddle1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandMiddle1/Male_RightHandMiddle2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandMiddle1/Male_RightHandMiddle2/Male_RightHandMiddle3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandMiddle1/Male_RightHandMiddle2/Male_RightHandMiddle3/Male_RightHandMiddle4
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandPinky1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandPinky1/Male_RightHandPinky2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandPinky1/Male_RightHandPinky2/Male_RightHandPinky3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandPinky1/Male_RightHandPinky2/Male_RightHandPinky3/Male_RightHandPinky4
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandRing1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandRing1/Male_RightHandRing2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandRing1/Male_RightHandRing2/Male_RightHandRing3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandRing1/Male_RightHandRing2/Male_RightHandRing3/Male_RightHandRing4
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandThumb1
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandThumb1/Male_RightHandThumb2
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandThumb1/Male_RightHandThumb2/Male_RightHandThumb3
+    m_Weight: 1
+  - m_Path: Male_Hips/Male_Spine/Male_Spine1/Male_Spine2/Male_RightShoulder/Male_RightArm/Male_RightForeArm/Male_RightHand/Male_RightHandThumb1/Male_RightHandThumb2/Male_RightHandThumb3/Male_RightHandThumb4
+    m_Weight: 1
