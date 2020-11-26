@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5280289935108913793}
   - component: {fileID: 4546457964896522026}
   - component: {fileID: 4546457964896522037}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Male_Character.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4066511988411442919}
   - component: {fileID: 7758450517748146466}
   - component: {fileID: 7758450517748146477}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Male_Character.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
